@@ -25,11 +25,11 @@ form.addEventListener("submit", function (event) {
 function checkEmail() {
   const emailError = document.querySelector(".email-error")
   if (email.validity.typeMismatch || email.validity.valueMissing) {
-    email.className = "mail-error"
+    emailError.className = "email-error error"
     emailError.textContent = "Please enter a valid email address"
     return false
   } else {
-    email.className = ""
+    emailError.className = "email-error"
     emailError.textContent = ""
     return true
   }
@@ -64,7 +64,7 @@ function checkZIP() {
 
     return true
   } else {
-    zipError.className = "zip-error active"
+    zipError.className = "zip-error error"
     zipError.textContent = constraints[country][1]
     return false
   }
@@ -81,6 +81,11 @@ function checkPassword() {
   const errorLength = document.querySelector(".password-error-length")
   const errorUppercase = document.querySelector(".password-error-uppercase")
   const errorNumber = document.querySelector(".password-error-number")
+
+  errorLength.textContent = "Password must contain at least 8 characters"
+  errorUppercase.textContent =
+    "Password must contain at least one uppercase letter"
+  errorNumber.textContent = "Password must contain at least one number"
 
   if (password.length < 8) {
     errorLength.className = "password-error-length error"
@@ -115,7 +120,7 @@ function checkPasswordMatch() {
   if (checkPassword()) {
     if (password === confirmPassword) {
       passwordError.className = "confirm-password-error valid"
-      passwordError.textContent = ""
+      passwordError.textContent = "Passwords match!"
       return true
     } else {
       passwordError.className = "confirm-password-error error"

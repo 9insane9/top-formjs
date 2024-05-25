@@ -1,23 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap");
+
+.advent-pro {
+  font-family: "Advent Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+*,
+input {
+  box-sizing: border-box;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: 500;
+  color: antiquewhite;
+}
+
+body,
 html {
   padding: 0;
   margin: 0;
+  background-color: #0f0f0f;
 }
 
 .container {
-  width: clamp(300px, 100vw, 800px);
+  width: 100%;
+  height: 100vh;
   border: 1px solid blue;
   margin: 0 auto;
 }
 
+div > h1 {
+  text-align: center;
+}
+
 form {
-  border: 1px solid red;
-  width: clamp(300px, 80vw, 600px);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 30px 20px;
+  border: 1px solid #008170;
+  border-radius: 10px;
+  width: clamp(320px, 100vw, 400px);
   margin: 0 auto;
+  background-color: #232d3f;
+}
+
+p {
+  margin: 5px;
+}
+
+input,
+select {
+  appearance: none;
+  width: 80%;
+  height: 30px;
+  font-size: 1.15rem;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #005b41;
+}
+
+input:active {
+  border: blue;
+}
+
+label {
+  font-size: 1.25rem;
 }
 
 span,
 label {
   display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  margin: 5px auto;
+}
+
+#submit {
+  margin-top: 20px;
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+  height: 40px;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #008170;
+}
+
+#submit:hover {
+  background-color: #005b41;
+  cursor: pointer;
+}
+
+.valid,
+.error {
+  padding-left: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.valid {
+  color: green;
 }
 
 .password-error-length.error::before,
@@ -26,9 +114,12 @@ label {
   background-image: url("./images/checkbox-blank-circle-outline.png");
   background-size: 20px 20px;
   display: inline-block;
+  background-repeat: no-repeat;
   width: 20px;
   height: 20px;
   content: "";
+  padding-right: 5px;
+  vertical-align: middle;
 }
 
 .password-error-length.valid::before,
@@ -40,4 +131,6 @@ label {
   width: 20px;
   height: 20px;
   content: "";
+  padding-right: 5px;
+  vertical-align: middle;
 }

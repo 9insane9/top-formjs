@@ -7,6 +7,9 @@
   </head>
   <body>
     <div class="container">
+      <div>
+        <h1>Sign up</h1>
+      </div>
       <form action="" novalidate>
         <p class="email-container">
           <label for="mail">Please enter an email address:</label>
@@ -29,22 +32,16 @@
         <p class="pw-container">
           <label for="password">Password:</label>
           <input type="password" id="password" />
-          <span class="password-error-length error" aria-live="polite"
-            >Password must contain at least 8 characters</span
-          >
-          <span class="password-error-uppercase error" aria-live="polite"
-            >Password must contain at least one uppercase letter</span
-          >
-          <span class="password-error-number error" aria-live="polite"
-            >Password must contain at least one number</span
-          >
+          <span class="password-error-length" aria-live="polite"></span>
+          <span class="password-error-uppercase" aria-live="polite"></span>
+          <span class="password-error-number" aria-live="polite"></span>
         </p>
         <p class="pw-confirm-container">
           <label for="confirm-password">Confirm password:</label>
           <input type="password" id="confirm-password" />
           <span class="confirm-password-error" aria-live="polite"></span>
         </p>
-        <input type="submit" id="submit" />
+        <button type="submit" id="submit">SUBMIT</button>
       </form>
     </div>
   </body>
