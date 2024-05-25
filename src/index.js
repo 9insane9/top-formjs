@@ -14,12 +14,18 @@ window.onload = () => {
 
 form.addEventListener("submit", function (event) {
   event.preventDefault()
+  const report = document.querySelector("#form-report")
+  let text
 
   if (checkPasswordMatch() && checkEmail() && checkZIP()) {
-    console.log("Form is valid. Submitting...")
+    text = "All good! High five!"
+    report.className = "valid"
   } else {
-    console.log("Form is invalid. Please correct the errors and try again.")
+    text = "No high five for you, check fields!"
+    report.className = "error"
   }
+
+  report.textContent = text
 })
 
 function checkEmail() {
