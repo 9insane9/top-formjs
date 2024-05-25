@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-</head>
-<body>
-    <script defer src="bundle.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" novalidate>
+        <p class="email-container">
+          <label for="mail">Please enter an email address:</label>
+          <input type="email" id="mail" name="mail" required minlength="8" />
+          <span class="email-error" aria-live="polite"></span>
+        </p>
+        <p class="country-container">
+          <label for="country">Country:</label>
+          <select id="country">
+            <option value="ee">Estonia</option>
+            <option value="lv">Latvia</option>
+            <option value="lt">Lithuania</option>
+          </select>
+        </p>
+        <p class="zip-container">
+          <label for="ZIP">ZIP : </label>
+          <input type="text" id="ZIP" />
+          <span class="zip-error" aria-live="polite"></span>
+        </p>
+        <p class="pw-container">
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+          <span class="password-error-length error" aria-live="polite"
+            >Password must contain at least 8 characters</span
+          >
+          <span class="password-error-uppercase error" aria-live="polite"
+            >Password must contain at least one uppercase letter</span
+          >
+          <span class="password-error-number error" aria-live="polite"
+            >Password must contain at least one number</span
+          >
+        </p>
+        <p class="pw-confirm-container">
+          <label for="confirm-password">Confirm password:</label>
+          <input type="password" id="confirm-password" />
+          <span class="confirm-password-error" aria-live="polite"></span>
+        </p>
+        <input type="submit" id="submit" />
+      </form>
+    </div>
+  </body>
 </html>

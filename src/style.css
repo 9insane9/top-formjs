@@ -1,0 +1,43 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: clamp(300px, 100vw, 800px);
+  border: 1px solid blue;
+  margin: 0 auto;
+}
+
+form {
+  border: 1px solid red;
+  width: clamp(300px, 80vw, 600px);
+  margin: 0 auto;
+}
+
+span,
+label {
+  display: block;
+}
+
+.password-error-length.error::before,
+.password-error-uppercase.error::before,
+.password-error-number.error::before {
+  background-image: url("./images/checkbox-blank-circle-outline.png");
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
+
+.password-error-length.valid::before,
+.password-error-uppercase.valid::before,
+.password-error-number.valid::before {
+  background-image: url("./images/check-circle-outline.png");
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
